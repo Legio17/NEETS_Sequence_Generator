@@ -37,6 +37,46 @@ class ControlSeq():
         cmd += " HasData=" +cl.putInQuote(self.hasData)
         cmd += " UseHeaderFooter=" +cl.putInQuote(self.useFooter) +">"
 
+        cmd += cl.newLine()
+        cmd += cl.addTab(4)
+        cmd += "<Description />"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(4)
+        cmd += "<Image />"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(4)
+        cmd += "<Command>"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(5)
+        cmd += "<Data1>" + self.data1
+        cmd += "</Data1>"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(5)
+        cmd += "<Data2>" + self.data2
+        cmd += "</Data2>"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(5)
+        cmd += "<Lock1 Value=" +cl.putInQuote(self.trasmitLock)
+        cmd +=  " />"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(5)
+        cmd += "<Lock2 Value=" +cl.putInQuote(self.keyLock)
+        cmd +=  " />"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(4)
+        cmd += "</Command>"
+
+        cmd += cl.newLine()
+        cmd += cl.addTab(3)
+        cmd += "</Sequence>"
+        
         print(cmd)
         
         

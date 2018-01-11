@@ -71,5 +71,5 @@ class ConvertData:
 
 TEST = ConvertData()
 TEST.decimalToAscii(120)
-print(TEST.asciiToDecSeq("123654"))
+print(TEST.asciiToHexSeq("OUT02FR01"))
 
